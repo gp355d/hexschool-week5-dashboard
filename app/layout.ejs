@@ -12,16 +12,68 @@
 </head>
 
 <body>
-  <header class="sidebar">
+  <div class="wrap d-flex">
+    <header class="sidebar">
+      <img src="./assets/images/logo-ANSWER.svg" alt="logo-answer" class="logo">
+      <ul class="menu">
+        <li class="mb-29">
+          <span class="material-icons mr-16">
+          insert_chart
+          </span>
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="mb-29">
+          <span class="material-icons mr-16">
+            forum
+          </span>
+          <a href="#">Question</a>
+        </li>
+        <li class="mb-29">
+          <span class="material-icons mr-16">
+            assignment
+          </span>
+          <a href="#">Assignment</a>
+        </li>
+        <li class="mb-29">
+          <span class="material-icons mr-16">
+            video_library
+          </span>
+          <a href="#">Course</a>
+        </li>
+        <li class="mb-29">
+          <span class="material-icons mr-16">
+            supervisor_account
+          </span>
+          <a href="#">Admin</a>
+        </li>
+        <li class="mb-29">
+          <span class="material-icons mr-16">
+            settings
+          </span>
+          <a href="#">Settings</a>
+        </li>
+      </ul>
+      <div class="acount-info d-flex align-items-center">
+        <img class="mr-16"src="./assets/images/photo-man.jpg" alt="persional-photo">
+        <div class="info">
+          <span>Andy Chen</span>
+          <span>andy0401@mail.com</span>
+  
+        </div>
+      </div>
+    </header>
+    <section class="content container">
 
-  </header>
+      <%- contents %>
+    </section>
 
-  <%- contents %>
+  </div>
 
-  <footer class="footer">
-    footer
-  </footer>
+
+
   <script src="./assets/js/vendors.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   <script src="./assets/js/all.js"></script>
 </body>
 

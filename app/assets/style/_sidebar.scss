@@ -1,7 +1,12 @@
+
 .sidebar{
     width: 296px;
     background-color: $primary-color;
-    padding-left: 32px;
+    padding: 40px 0px 32px 32px;
+
+}
+.logo{
+    margin-bottom: 32px;
 }
 .menu {
     li{
@@ -9,6 +14,117 @@
     align-items: center;
         a{
             color:$primary-text;
+            font-weight: bold;
         }
+        a:hover{
+            text-decoration: none;
+        }
+    }
 }
+.menu li:last-child{
+    margin-bottom: 362px;
+    }
+.acount-info{
+    img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    }
+}
+.info span{
+    margin-bottom: 4px;
+}
+.content{
+    width: 984px;
+}
+.top{
+    padding: 32px;
+}
+.top-nav{
+    margin-right: auto;
+}
+.top-nav span:first-child{
+    margin-right: 46px;
+}
+.top-nav span:nth-child(2){
+    margin-right: 7px;
+}
+.top ul li{
+    margin-right: 16px;
+}
+.top ul li:last-child{
+    margin-right: 0;
+}
+.more-btn{
+    align-items: center;
+    margin-bottom: 6px;
+}
+.list-group-item {
+    padding: 12px;
+    font-size: 12px;
+}
+.more-area{
+    span{
+    font-size: 16px;
+    }
+    small{
+        font-size: 12px;
+    }
+}
+.msg-list{
+    justify-content: space-between;
+    align-items:space-between;
+}
+.card-header{
+    padding: 12px 16px;
+}
+.media img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.media-body{
+    h5{
+       font-size: 16px;
+       margin-bottom: 4px;
+   }
+   small{
+       font-size: 12px;
+   }
+   p{
+       font-size: 14px;
+       margin-bottom: 16px;
+   }
+   button{
+       padding: 11px 16px 10px 12px;
+       border: 1px solid $border-color;
+       margin-bottom: 26px;
+   }
+   i{
+       margin-right: 8px;
+   }
+}
+.msg-time{
+    font-size: 12px;
+}
+.btn-area {
+    i{
+        margin-right: 23px;
+       
+    } 
+    a{
+            color: #000;
+        }
+    button{
+        margin-right: 16px;
+    }
+    button:last-child{
+        margin-right: 0;
+    }
+    span{
+        margin-right: auto;
+    }
+}
+.tab-content{
+    margin-bottom: 16px;
 }
