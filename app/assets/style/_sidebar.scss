@@ -1,0 +1,14 @@
+.sidebar{
+    width: 296px;
+    background-color: $primary-color;
+    padding-left: 32px;
+}
+.menu {
+    li{
+    display: flex;
+    align-items: center;
+        a{
+            color:$primary-text;
+        }
+}
+}

@@ -1,0 +1,178 @@
+/*共用footer layout部分*/
+@import "variable";
+@import "mixin";
+/*footer區塊開始*/
+
+.footer {
+    background-color: $primary-color;
+    padding: 48px 0px 39px 0px;
+    color: $text-color;
+}
+.countas-way{
+    border-top: 1px solid $text-color;
+    padding-top: 24px;
+}
+@include pad(){
+    .footer {
+        .container {
+            max-width: 672px;
+        }
+    }
+}
+
+@include phone(){
+    .footer {
+        .container {
+            max-width: 352px;
+        }
+    }
+}
+
+.footer-outer {
+    padding: 0 10px;
+}
+
+@include pad(){
+    .footer-outer {
+        padding: 0;
+    }
+}
+
+.link {
+    align-items: flex-start;
+    // margin-bottom: 38px;
+}
+
+.website-link {
+    width: 368px;
+    margin-bottom: 32px;
+    & li a {
+        text-decoration: none;
+        color: $text-color;
+    }
+}
+
+.social-link {
+    width: 208px;
+}
+
+@include phone(){
+    .website-link {
+        display: none;
+    }
+}
+
+@include pad(){
+    .social-link {
+        width: 120px;
+    }
+}
+
+.countas-way-list {
+    & li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        p {
+            font-size: 36px;
+        }
+    }
+    & img {
+        width: 36px;
+        height: 36px;
+        margin-right: 23px;
+    }
+}
+
+@include pad(){
+    .countas-way-list {
+        & li {
+            p {
+                font-size: 16px;
+            }
+        }
+        & img {
+            width: 23px;
+            height: 23px;
+            margin-right: 12px;
+        }
+    }
+}
+
+.countas-way-list li:nth-child(2) img {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+}
+
+@include pad(){
+    .countas-way-list li:nth-child(2) img {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+}
+
+hr {
+    margin: 0;
+    border: none;
+    background-color: $text-color;
+    height: 1px;
+}
+
+@include pad(){
+    .social-link li img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.copyright {
+    & ul {
+        & li a {
+            font-size: 14px;
+            text-decoration: none;
+            color: $text-color;
+        }
+    }
+    & a img {
+        width: 80px;
+        height: 48.57px;
+    }
+}
+
+.copyright a {
+    margin-right: 38px;
+}
+
+.copyright p {
+    margin-right: auto;
+}
+
+@include pad(){
+    .copyright {
+        .logo {
+            display: none;
+        }
+    }
+}
+
+@include phone(){
+    .copyright {
+        flex-direction: column;
+    }
+    .copyright ul {
+        // display: block;
+        //這裡卡住了....
+    }
+    .copyright .logo {
+        display: block;
+        align-self: flex-end;
+        justify-self: end;
+        order: 1;
+    }
+    .copyright a img {
+        width: 46px;
+        height: 27.937px;
+    }
+}

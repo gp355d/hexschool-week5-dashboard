@@ -1,0 +1,45 @@
+/*共用header layout部分*/
+/*header區塊開始*/
+@import "variable";
+@import "mixin";
+.header {
+    background: $primary-color;
+    padding: 0 88px;
+    & h1 a {
+        display: block;
+        width: 80px;
+        height: 48.57px;
+        background-image: url(../images/logo.png);
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .hamber-menu {
+        display: none;
+    }
+}
+
+@include pad(){
+    .header {
+        padding: 0 48px;
+    }
+
+}
+
+
+@include phone(){
+    .header {
+        justify-content: center;
+        padding: 10px 16px;
+        position: relative;
+        .hamber-menu {
+            display: block;
+            position: absolute;
+            left: 31px;
+            color: $text-color;
+        }
+    }
+}
+
+
+/*header區塊結束*/
