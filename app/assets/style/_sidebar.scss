@@ -2,25 +2,41 @@
 .sidebar{
     width: 296px;
     background-color: $primary-color;
-    padding: 40px 0px 32px 32px;
+    padding: 40px 0px 32px 0px;
 
 }
 .logo{
     margin-bottom: 32px;
+    padding-left: 32px;
 }
 .menu {
     li{
     display: flex;
-    align-items: center;
-        a{
-            color:$primary-text;
-            font-weight: bold;
+    border-left: 4px solid transparent;
+            .outer{
+                display: flex;
+                color:$primary-text;
+                font-weight: bold;
+                text-decoration: none;
+                border-left: 4px solid transparent;
+            }
+            .outer:hover{
+                text-decoration: none;
+                color:$btn-bg-color;
+                border-left: 4px solid $btn-bg-color;
+            }
+            a{
+                color:$primary-text;
+                text-decoration: none;
+            }
+            span{
+                margin-left: 35px;
+            }
+
         }
-        a:hover{
-            text-decoration: none;
-        }
+
     }
-}
+
 .menu li:last-child{
     margin-bottom: 362px;
     }
@@ -29,9 +45,11 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    margin-left: 32px;
     }
 }
 .info span{
+    display: block;
     margin-bottom: 4px;
 }
 .content{
@@ -127,4 +145,62 @@
 }
 .tab-content{
     margin-bottom: 16px;
+}
+.text-edit {
+    display: flex;
+    li{
+        margin-right: 30px;
+    }
+
+}
+.text-input{
+    position: relative;
+    padding: 16px 24px 24px 24px;
+}
+.btn-area-replay{
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    button{
+        padding: 8px 32px;
+    }
+}
+.btn-area-replay button:first-child{
+    margin-right: 8px;
+}
+.card-header{
+    border: 1px solid $border-color;
+}
+.edit a{
+    color:$primary-text;
+}
+.page{
+    display: flex;
+    justify-content: flex-end;
+}
+.table thead th{
+    border-top: 0px solid #dee2e6;
+}
+.pagination {
+    justify-content: flex-end;
+    li{
+        border:1px solid $btn-bg-color;
+        a{
+            padding: 6px 10px;
+            width: 100%;
+            color:$primary-text;
+        }
+        a:hover{
+            text-decoration: none;
+            color:#fff;
+        }
+    }
+    li:hover{
+        background-color: $btn-bg-color;
+    }
+
+    li:nth-child(2){
+        background-color: $btn-bg-color;
+
+}
 }
