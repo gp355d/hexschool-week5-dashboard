@@ -1,0 +1,30 @@
+/*reply區塊開始*/
+.tab-content{
+    margin-bottom: 16px;
+}
+.text-edit {
+    display: flex;
+    li{
+        margin-right: 30px;
+    }
+
+}
+.text-input{
+    position: relative;
+    padding: 16px 24px 24px 24px;
+}
+.btn-area-replay{
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    button{
+        padding: 8px 32px;
+    }
+}
+.btn-area-replay button:first-child{
+    margin-right: 8px;
+}
+.card-header{
+    border: 1px solid $border-color;
+}
+/*reply區塊結束*/

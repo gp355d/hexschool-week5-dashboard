@@ -1,0 +1,29 @@
+/*content內部top區塊開始*/
+.content{
+    width: 984px;
+}
+.top{
+    padding: 32px;
+}
+.top-nav{
+    margin-right: auto;
+    & span:first-child{
+        margin-right: 46px;
+    }
+    span.add{
+        margin-right: 8px;
+    }
+    a{
+        color: $btn-bg-color;
+    }
+}
+.top-nav span:nth-child(2){
+    margin-right: 7px;
+}
+.top ul li{
+    margin-right: 16px;
+}
+.top ul li:last-child{
+    margin-right: 0;
+}
+/*content內部top區塊結束*/
