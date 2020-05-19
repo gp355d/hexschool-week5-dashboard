@@ -184,11 +184,15 @@
 .pagination {
     justify-content: flex-end;
     li{
+        width: 32px;
         border:1px solid $btn-bg-color;
         a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 6px 10px;
             width: 100%;
-            color:$primary-text;
+            color:$btn-bg-color;
         }
         a:hover{
             text-decoration: none;
@@ -199,8 +203,63 @@
         background-color: $btn-bg-color;
     }
 
-    li:nth-child(2){
+    li:nth-child(2) a{
         background-color: $btn-bg-color;
+        color:#fff;
 
+    }
+    li:nth-child(3) a,
+    li:nth-child(4) a,
+    li:nth-child(5) a{
+        color:$primary-text;
+    }
+    li:nth-child(3) a:hover,
+    li:nth-child(4) a:hover,
+    li:nth-child(5) a:hover{
+        color:#fff;
+    }
 }
+.modal-header{
+    border-bottom: none;
+}
+.modal-body{
+    display: block;
+    h2{
+        font-size: 24px;
+    }
+    .modal-title{
+        font-size: 20px;
+    }
+    .modal-title:nth-child(4){
+        margin-bottom: 19px;
+    }
+    label{
+        display: block;
+    }
+    hr{
+        margin-bottom: 24.5px;
+    }
+}
+.mail{
+    margin-bottom: 24.5px;
+}
+.name{
+    margin-bottom: 16px;
+}
+.name input,
+.mail input{
+    width: 100%;
+    padding: 16px;
+    background-color: $primary-color;
+    border: none;
+}
+.verified-area{
+    margin-bottom: 18px;
+    small{
+        font-size: 14px;
+    }
+}
+.verified{
+    text-align: center;
+    font-size: 16px;
 }
