@@ -10,7 +10,15 @@
     margin-bottom: 63px;
 }
 .table thead th{
+    border-bottom: none;
     border-top: 0px solid #dee2e6;
+}
+.table thead th:first-child{
+   display: flex;
+   align-items: center;
+   i{
+       color:$btn-bg-color;
+   }
 }
 .pagination {
     justify-content: flex-end;
@@ -122,5 +130,20 @@
 }
 .btn-outline-primary:hover{
     background-color: $btn-bg-color;
+}
+.view-photo{
+    img.user{
+        width: 141px;
+        border-radius:0;
+    }
+}
+.view-title .close{
+    padding: 0;
+    border: 0;
+}
+.more-btn{
+    i{
+        margin-right: 0;
+    }
 }
 /*table編輯頁面結束*/
