@@ -10,6 +10,7 @@
     padding-left: 32px;
 }
 .menu {
+    margin-bottom: 362px;
     li{
     display: flex;
     border-left: 4px solid transparent;
@@ -25,11 +26,7 @@
                 color:$btn-bg-color;
                 border-left: 4px solid $btn-bg-color;
             }
-            a{
-                color:$primary-text;
-                text-decoration: none;
-            }
-            span{
+            span.icon{
                 margin-left: 35px;
             }
 
@@ -37,20 +34,23 @@
 
     }
 
-.menu li:last-child{
-    margin-bottom: 362px;
-    }
 .acount-info{
-    img{
+    img.acount-photo{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin-left: 32px;
     }
 }
-.info span{
-    display: block;
-    margin-bottom: 4px;
-}
+.info{
+    span{
+        display: block;
+        margin-bottom: 4px;
+    }
+    span.email{
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+} 
 /*siderbar區塊結束*/
 
