@@ -1,20 +1,90 @@
----
-title: 首頁
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
-<section class="main container">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>回覆頁</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <div class="wrap d-flex">
+    <header class="sidebar">
+      <a href="index.html"><img src="./assets/images/logo-ANSWER.svg" alt="logo-answer" class="logo"></a>
+      <ul class="menu">
+        <li class="mb-29">
+          <a href="#" class="outer">
+            <span class="icon material-icons mr-16">
+            insert_chart
+          </span>
+          <p>Dashboard</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="#" class="outer">
+            <span class="icon material-icons mr-16">
+              forum
+            </span>
+            <p>Question</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="index-reply.html" class="outer">
+            <span class="icon material-icons mr-16">
+              assignment
+            </span>
+            <p>Assignment</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="#" class="outer">
+          <span class="icon material-icons mr-16">
+            video_library
+          </span>
+          <p>Course</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="table.html" class="outer">
+            <span class="icon material-icons mr-16">
+              supervisor_account
+            </span>
+            <p>Admin</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="#" class="outer">
+            <span class="icon material-icons mr-16">
+              settings
+            </span>
+            <p>Settings</p>
+          </a>
+        </li>
+      </ul>
+      <div class="acount-info d-flex align-items-center">
+        <img class="acount-photo mr-16"src="./assets/images/photo-man.jpg" alt="persional-photo">
+        <div class="info">
+          <span class="font-weight-bold">Andy Chen</span>
+          <span class="email">andy0401@mail.com</span>
+  
+        </div>
+      </div>
+    </header>
+    <section class="content container">
+      <section class="main container">
   <header class="top d-flex align-items-center">
     <nav class="top-nav d-flex align-items-center">
       <h2 class="top-nav-title">Assignment</h2>
       <span>All Courses</span>
       <span class="material-icons">expand_more</span>
     </nav>
-    <ul class="d-flex">
-      <li><span class="material-icons">search</span></li>
-      <li><span class="material-icons">notifications_active</span></li>
+    <ul class="notice d-flex">
+      <li><a href="#"><span class="material-icons">search</span></a></li>
+      <li><a href="#"><span class="material-icons">notifications_active</span></a></li>
     </ul>
   </header>
   <div class="more-area d-flex justify-content-between">
@@ -72,11 +142,11 @@ current: index
         <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
           <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
-              <div class="card-title">
+              <div class="title">
                 <p>Chapter Assignment 2 / HTML&CSS</p>
                 <p>Please check this file for me, thanks!</p>
               </div>
-              <span class="material-icons">more_vert</span>
+              <a class="more-event"href="#"><span class="material-icons">more_vert</span></a>
             </div>
             <div class="card-body">
               <div class="media">
@@ -85,7 +155,7 @@ current: index
                   <h5 class="mt-0 send-msg-name">Emily Wang</h5>
                   <small class="send-msg-time">10:38 AM (4 hours ago)</small>
                   <p class="send-msg-content">Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <code>div</code>  is bigger than the height of the <code>img</code> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. What is the gap or extra space below image?</p>
-                  <button class="d-flex align-items-center      attach_file ">
+                  <button class="btn d-flex align-items-center attach_file ">
                     <i class="material-icons attach_file-icon">attach_file</i>
                     <span>HW-2-David.zip</span>
                   </button>
@@ -95,8 +165,13 @@ current: index
               <div class="media">
                 <img src="./assets/images/photo-man.jpg" class="mr-3" alt="user-photo">
                 <div class="media-body">
-                  <h5 class="mt-0 send-msg-name">Andy Chen (You)</h5>
-                  <small class="send-msg-time">10:38 AM (4 hours ago)</small>
+                  <div class="reply-title d-flex align-items-center">
+                    <h5 class="mt-0 send-msg-name mr-auto">Andy Chen (You)</h5>
+                    <a href="#"><i class="material-icons mr-24">star_border</i></a>
+                    <a href="#"><i class="material-icons">edit</i></a>
+                  </div>
+                    <small class="send-msg-time">10:38 AM (4 hours ago)</small>
+
                   <p class="send-msg-content">Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q. </p>
                   <span>You can:</span>
                   <ul class="sent-reply-content">
@@ -113,7 +188,7 @@ current: index
         <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
       </div>
       <div class="btn-area d-flex align-items-center">
-        <span>
+        <span class="mr-auto">
           <a href="#"><i class="material-icons">chevron_left</i></a>
           <a href="#"><i class="material-icons">chevron_right</i></a>
         </span>
@@ -123,3 +198,16 @@ current: index
     </div>
   </div>
 </section>
+    </section>
+
+  </div>
+
+
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

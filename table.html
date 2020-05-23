@@ -1,10 +1,81 @@
----
-title: 首頁
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>編輯權限頁</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <div class="wrap d-flex">
+    <header class="sidebar">
+      <a href="index.html"><img src="./assets/images/logo-ANSWER.svg" alt="logo-answer" class="logo"></a>
+      <ul class="menu">
+        <li class="mb-29">
+          <a href="#" class="outer">
+            <span class="icon material-icons mr-16">
+            insert_chart
+          </span>
+          <p>Dashboard</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="#" class="outer">
+            <span class="icon material-icons mr-16">
+              forum
+            </span>
+            <p>Question</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="index-reply.html" class="outer">
+            <span class="icon material-icons mr-16">
+              assignment
+            </span>
+            <p>Assignment</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="#" class="outer">
+          <span class="icon material-icons mr-16">
+            video_library
+          </span>
+          <p>Course</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="table.html" class="outer">
+            <span class="icon material-icons mr-16">
+              supervisor_account
+            </span>
+            <p>Admin</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="#" class="outer">
+            <span class="icon material-icons mr-16">
+              settings
+            </span>
+            <p>Settings</p>
+          </a>
+        </li>
+      </ul>
+      <div class="acount-info d-flex align-items-center">
+        <img class="acount-photo mr-16"src="./assets/images/photo-man.jpg" alt="persional-photo">
+        <div class="info">
+          <span class="font-weight-bold">Andy Chen</span>
+          <span class="email">andy0401@mail.com</span>
+  
+        </div>
+      </div>
+    </header>
+    <section class="content container">
+      
 
 <section class="main-admin container">
   <header class="top d-flex align-items-center">
@@ -135,7 +206,7 @@ current: index
         </form>
         <hr>
         <h2 class="modal-title">Verification</h2>
-        <div class="verified-area d-flex align-items-center"><i class="material-icons">check_circle</i><p class="mr-auto">Verified</p><small>2020/4/12</small></div>
+        <div class="verified-area d-flex align-items-center"><i class="material-icons">check_circle</i><p class="mr-auto font-weight-bold">Verified</p><small>2020/4/12</small></div>
         <input class="form-control verified verified-edit" type="text" placeholder="Send Verification Mail" readonly>
         <hr>
         <h2 class="modal-title mb-16">Access Level</h2>
@@ -167,23 +238,23 @@ current: index
 <div class="modal fade" id="view-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <!-- <div class="modal-header"> -->
         <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> -->
-      </div>
+      <!-- </div> -->
       <div class="modal-body d-flex">
-        <div class="media view-photo">
-          <img src="./assets/images/user-photo.jpg" class="user mr-3 h-100" alt="...">
-        </div>
+        <!-- <div class="media view-photo"> -->
+          <img src="./assets/images/user-photo.jpg" class="user mr-3" alt="...">
+        <!-- </div> -->
           <div class="media-body">
             <div class="view-title">
               <span class="mt-0">#1</span>            
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span  class="close"aria-hidden="true">&times;</span>
               </button>
             </div>
             <h4 class="permission">Admin</h4>
-            <h3 class="name">Emir Wicks</h3>
-            <p class="mail-address">emir.wicks@mail.com</p>
+            <h3 class="view-name">Emir Wicks</h3>
+           <p class="mail-address">emir.wicks@mail.com</p>
             <div class="view-footer">
               <h5 class="d-flex align-items-center justify-content-between more-btn"><p>verified</p> <i class="material-icons"data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">expand_more</i></h5>
               
@@ -192,9 +263,9 @@ current: index
       </div>
       <div class="modal-footer">
         <div class="collapse" id="collapseExample">
-          <div class="ccc text-right">
-            <button type="button" class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Deactivate</button>
-            <button type="button" class="btn btn-primary">Edit</button>
+          <div class="view-modal text-right">
+            <button type="button" class="btn btn-outline-pink" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Deactivate</button>
+            <button type="button" class="btn btn-success">Edit</button>
           </div>
         </div>
       </div>
@@ -226,7 +297,7 @@ current: index
         </form>
         <hr>
         <h2 class="modal-title">Verification</h2>
-        <div class="verified-area d-flex align-items-center"><i class="material-icons warning-color">warning</i><p class="mr-auto">unverified</p></div>
+        <div class="verified-area d-flex align-items-center"><i class="material-icons warning-color">warning</i><p class="mr-auto font-weight-bold">Unverified</p></div>
         <input class="form-control verified verified-add" type="text" placeholder="Send Verification Mail">
         <hr>
         <h2 class="modal-title mb-16">Access Level</h2>
@@ -250,3 +321,16 @@ current: index
     </div>
   </div>
 </div>
+    </section>
+
+  </div>
+
+
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

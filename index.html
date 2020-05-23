@@ -1,19 +1,90 @@
----
-title: 首頁
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
-<section class="main container">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>收件頁</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <div class="wrap d-flex">
+    <header class="sidebar">
+      <a href="index.html"><img src="./assets/images/logo-ANSWER.svg" alt="logo-answer" class="logo"></a>
+      <ul class="menu">
+        <li class="mb-29">
+          <a href="#" class="outer">
+            <span class="icon material-icons mr-16">
+            insert_chart
+          </span>
+          <p>Dashboard</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="#" class="outer">
+            <span class="icon material-icons mr-16">
+              forum
+            </span>
+            <p>Question</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="index-reply.html" class="outer">
+            <span class="icon material-icons mr-16">
+              assignment
+            </span>
+            <p>Assignment</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="#" class="outer">
+          <span class="icon material-icons mr-16">
+            video_library
+          </span>
+          <p>Course</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="table.html" class="outer">
+            <span class="icon material-icons mr-16">
+              supervisor_account
+            </span>
+            <p>Admin</p>
+          </a>
+        </li>
+        <li class="mb-29">
+          <a href="#" class="outer">
+            <span class="icon material-icons mr-16">
+              settings
+            </span>
+            <p>Settings</p>
+          </a>
+        </li>
+      </ul>
+      <div class="acount-info d-flex align-items-center">
+        <img class="acount-photo mr-16"src="./assets/images/photo-man.jpg" alt="persional-photo">
+        <div class="info">
+          <span class="font-weight-bold">Andy Chen</span>
+          <span class="email">andy0401@mail.com</span>
+  
+        </div>
+      </div>
+    </header>
+    <section class="content container">
+      <section class="main container">
   <header class="top d-flex align-items-center">
     <nav class="top-nav d-flex align-items-center">
       <h2 class="top-nav-title">Assignment</h2>
       <span>All Courses</span>
       <span class="material-icons">expand_more</span>
     </nav>
-    <ul class="d-flex">
-      <li><span class="material-icons">search</span></li>
-      <li><span class="material-icons">notifications_active</span></li>
+    <ul class="notice d-flex">
+      <li><a href="#"><span class="material-icons">search</span></a></li>
+      <li><a href="#"><span class="material-icons">notifications_active</span></a></li>
     </ul>
   </header>
   <div class="more-area d-flex justify-content-between">
@@ -75,7 +146,7 @@ current: index
                 <p>Chapter Assignment 2 / HTML&CSS</p>
                 <p>Please check this file for me, thanks!</p>
               </div>
-              <span class="material-icons">more_vert</span>
+              <a class="more-event"href="#"><span class="material-icons">more_vert</span></a>
             </div>
             <div class="card-body">
               <div class="media">
@@ -85,7 +156,7 @@ current: index
                     <h5 class="mt-0 send-msg-name">Emily Wang</h5>
                     <small class="send-msg-time">10:38 AM (4 hours ago)</small>
                     <p class="send-msg-content">Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <code>div</code>  is bigger than the height of the <code>img</code> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. What is the gap or extra space below image?</p>
-                    <button class="d-flex align-items-center      attach_file ">
+                    <button class="btn d-flex align-items-center attach_file ">
                       <i class="material-icons attach_file-icon">attach_file</i>
                       <span>HW-2-David.zip</span>
                     </button>
@@ -96,22 +167,35 @@ current: index
         </div>
         <div class="card">
           <div class="card-header d-flex justify-content-between align-items-center">
-            <ul class="text-edit">
-              <li>Body Text</li>
-              <li><i class="material-icons">format_bold</i></li>
-              <li><i class="material-icons">format_italic</i></li>
-              <li><i class="material-icons">format_list_bulleted</i></li>
-              <li><i class="material-icons">format_list_numbered</i></li>
-              <li><i class="material-icons">insert_photo</i></li>
-              <li><i class="material-icons">insert_link</i></li>
-              <li><i class="material-icons">chevron_left</i></li>
-              <li><i class="material-icons">chevron_right</i></li>
+            <ul class="text-edit align-items-center">
+              <li>
+                <div class="dropdown">
+                  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Body Text
+                  </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+              </li>
+              <li><a href="#"><i class="material-icons">format_bold</i></a></li>
+              <li><a href="#"><i class="material-icons">format_italic</i></a></li>
+              <li><a href="#"><i class="material-icons">format_list_bulleted</i></a></li>
+              <li><a href="#"><i class="material-icons">format_list_numbered</i></a></li>
+              <li><a href="#"><i class="material-icons">insert_photo</i></a></li>
+              <li><a href="#"><i class="material-icons">insert_link</i></a></li>
+              <li><a href="#"><i class="material-icons">chevron_left</i></a></li>
+              <li><a href="#"><i class="material-icons">chevron_right</i></a></li>
             </ul>
           </div>
           <textarea class="text-input"name="" id="" cols="30" rows="10" placeholder="Reply an answer…"></textarea>
           <div class="btn-area reply d-flex">
-            <button type="button" class="btn btn-outline-primary">Cancel</button>
-            <button type="button" class="btn btn-success">Reply</button>
+            <button type="button" class="btn btn-outline-primary mr-16">Cancel</button>
+            <a class="btn btn-success" href="index-reply.html" role="button">Reply</a>
+            
           </div>
         </div>
         <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
@@ -121,3 +205,16 @@ current: index
     </div>
   </div>
 </section>
+    </section>
+
+  </div>
+
+
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
