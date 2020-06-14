@@ -8392,6 +8392,12 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
+.pl-0 {
+  padding-left: 0; }
+
+.mr-7 {
+  margin-right: 7px; }
+
 .mr-16 {
   margin-right: 16px; }
 
@@ -8472,11 +8478,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 46px; }
   .top-nav span.add {
     margin-right: 8px; }
-  .top-nav a {
+  .top-nav a:hover {
     color: #2A8356; }
-  .top-nav span.add:hover {
-    border-bottom: 0; }
-  .top-nav span:nth-child(2) {
+  .top-nav .dropdown span {
+    font-weight: bold; }
+  .top-nav .dropdown span:first-child {
     margin-right: 7px; }
 
 .top ul li {
@@ -8492,6 +8498,9 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 6px; }
+
+.more-area a:hover {
+  color: #2A8356; }
 
 .more-area span {
   font-size: 16px; }
@@ -8557,9 +8566,9 @@ h1, h2, h3, h4, h5, h6 {
 .media-body .attach_file {
   padding: 11px 16px 10px 12px;
   border: 0;
-  background-color: #CDDDCD; }
+  background-color: #EDF4EE; }
   .media-body .attach_file:hover {
-    background-color: #EDF4EE; }
+    background-color: #CDDDCD; }
 
 .media-body .attach_file-icon {
   margin-right: 8px; }
@@ -8577,7 +8586,10 @@ h1, h2, h3, h4, h5, h6 {
           box-shadow: none; }
 
 .btn-area a {
-  color: #fff; }
+  color: black; }
+
+.btn-area a:hover {
+  color: #2A8356; }
 
 .text-edit a {
   color: #000; }
@@ -8738,7 +8750,8 @@ td.edit a {
 
 .new-email,
 .new-name {
-  background-color: #fff; }
+  background-color: #EDF4EE;
+  border: none; }
 
 .verified-add::-webkit-input-placeholder {
   color: #2A8356; }
@@ -8777,8 +8790,6 @@ td.edit a {
     font-size: 14px; }
 
 .square {
-  width: 24px;
-  height: 24px;
   border: 1px solid #121212;
   margin-right: 8px; }
 
