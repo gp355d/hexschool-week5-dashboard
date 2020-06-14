@@ -16,13 +16,19 @@
     span.add{
         margin-right: 8px;
     }
-    a{
+    a:hover{
         color: $btn-bg-color;
     }
-    span.add:hover{
-        border-bottom: 0;
+    // span.add:hover{
+    //     border-bottom: 0;
+    // }
+    // span:nth-child(2){
+    //     margin-right: 7px;
+    // }
+    .dropdown span{
+        font-weight:bold;
     }
-    span:nth-child(2){
+    .dropdown span:first-child{
         margin-right: 7px;
     }
 }

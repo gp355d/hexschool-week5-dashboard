@@ -1,6 +1,9 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "variables";//複製新的bootstrap變數
+@import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
-@import "base";
-@import "variable";
+@import "variable";//自訂變數
+@import "base";//自訂全域變數
 @import "sidebar";
 @import "top";//content上方top區塊
 @import "main";//content內部main區塊

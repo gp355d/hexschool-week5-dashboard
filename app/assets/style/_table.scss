@@ -2,9 +2,16 @@
 .table{
     margin-bottom: 63px;
 }
-.table thead th{
-    border-bottom: none;
-    border-top: 0px solid #dee2e6;
+.table thead tr:first-child th{
+    border-top: 0;
+    border-bottom: 0;
+}
+.table tbody tr th,.table tbody tr td{
+    border-top: 0;
+    border-bottom: 1px solid $border-color;
+}
+.table tbody tr:first-child{
+    border-top: 1px solid #000;
 }
 .table th,.table td{
     padding-left: 0;
@@ -63,7 +70,7 @@ td.edit a{
 }
 /*add modal start*/
 .modal-header{
-    border-bottom: none;
+    // border-bottom: none;
 }
 .modal-body{
     display: block;
@@ -92,11 +99,12 @@ td.edit a{
 .name input,
 .mail input{
     width: 100%;
-    padding: 16px;
+    padding: 12px;
 }
 .new-email,
 .new-name{
-    background-color: #fff;
+    background-color: #EDF4EE;
+    border:none;
     
 }
 .verified-add::placeholder{
@@ -117,6 +125,7 @@ td.edit a{
 .verified-area{
     margin-bottom: 18px;
     i{
+        color: $btn-bg-color;
         margin-right: 10px;
     }
     i.warning-color,p.warning-color{
@@ -129,8 +138,8 @@ td.edit a{
     
 }
 .square{
-    width: 24px;
-    height: 24px;
+    // width: 24px;
+    // height: 24px;
     border: 1px solid $primary-text;
     margin-right: 8px;
 }
@@ -170,66 +179,38 @@ td.edit a{
 .verified{
     text-align: center;
     font-size: 16px;
+    height: 51px;
+    padding: 16px;
 }
 .modal-footer{
     border-top: 0;
-/*共用button樣式*/
-    .btn.focus, .btn:focus {
-        outline: 0;
-        box-shadow: none;
-    }
-    
-    .btn-outline-primary{
-        background-color:#fff;
-        color:$btn-bg-color;
-        border-color: $border-color;
-        box-shadow: none;
-    }
-    .btn-outline-primary:hover{
-        background-color: $btn-bg-color;
-        color: #ffffff;
-    }
-    .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
-        // color: #fff;
-        background-color: $btn-bg-color;
-        border: none;
-        border-color: $border-color;
-        box-shadow: none;
-    }
-    .btn-success{
-        background-color: $btn-bg-color;
-        color: #ffffff;
-    }
-    .btn-success:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
-        color: #fff;
-        background-color: $btn-bg-color;
-        border: none;
-        border-color: $border-color;
-        box-shadow: none;
-    }
 }
 
 /*edit modal end*/
-.view-photo{
-    img.user{
+/*view modal start*/    
+img.user{
         width: 141px;
+        height: auto;
         border-radius:0;
     }
-}
 .view-title {
+    margin-bottom: 8px;
     .close{
         padding: 0;
         border: 0;
     }
-    span{
-        margin-bottom: 8px;
-    }
+    // span.close{
+    //     color: $primary-text;
+    //     margin-bottom: 8px;
+    // }
+
+    /*view modal end*/
 .permission{
     h4.permission{
         font-size: 16px;
         font-weight:200;
     }
-    h3.name{
+    .view-name{
         font-size: 24px;
         margin-bottom: 8px;
     }
@@ -238,6 +219,14 @@ td.edit a{
         margin-bottom: 20px;
     }
 }
+}
+.view-modal{
+    button{
+        padding: 8px 32px;
+    }
+    button:first-child{
+        margin-right: 8px;
+    }
 }
 .view-footer p{
     background-color: $primary-color;

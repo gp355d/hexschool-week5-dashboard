@@ -1,5 +1,5 @@
 ---
-title: 首頁
+title: 編輯權限頁
 layout: ./app/layout.ejs
 engine: ejs
 current: index
@@ -124,19 +124,24 @@ current: index
       <div class="modal-body">
         <h2 class="modal-title mb-16">Account</h2>
         <form action="">
-          <div class="name mb-16">
-            <label for="name">Name</label>
-            <input class="edit-name"type="text"  id="name">
+          <div class="form-group">
+            <div class="name mb-16">
+              <label for="name">Name</label>
+              <input class="edit-name form-control"type="text"  id="name" value="">
+            </div>
           </div>
-          <div class="mail">
-            <label for="mail">Email</label>
-            <input class="edit-email" type="text" id="mail">
+          <div class="form-group">
+            <div class="mail">
+              <label for="mail">Email</label>
+              <input class="edit-email form-control" type="text" id="mail" value="">
+            </div>
           </div>
         </form>
         <hr>
         <h2 class="modal-title">Verification</h2>
-        <div class="verified-area d-flex align-items-center"><i class="material-icons">check_circle</i><p class="mr-auto">Verified</p><small>2020/4/12</small></div>
-        <input class="form-control verified verified-edit" type="text" placeholder="Send Verification Mail" readonly>
+        <div class="verified-area d-flex align-items-center"><i class="material-icons">check_circle</i><p class="mr-auto font-weight-bold">Verified</p><small>2020/4/12</small></div>
+        <button type="button" class="btn btn-block btn-outline-success" disabled>Send Verification Mail</button>
+        <!-- <input class="form-control verified verified-edit" type="text" placeholder="Send Verification Mail" readonly> -->
         <hr>
         <h2 class="modal-title mb-16">Access Level</h2>
         <select class="form-control form-control">
@@ -144,13 +149,43 @@ current: index
         </select>
         <hr>
         <h2 class="modal-title mb-16">Custom Access</h2>
-        <ul>
+        <div class="form-check mb-16">
+          <input class="form-check-input square" type="checkbox" value="" id="editoption1">
+          <label class="form-check-label" for="editoption1">
+            lecture
+          </label>
+        </div> 
+        <div class="form-check mb-16">
+          <input class="form-check-input square" type="checkbox" value="" id="editoption2">
+          <label class="form-check-label" for="editoption2>
+            Coupon
+          </label>
+        </div>
+        <div class="form-check mb-16">
+          <input class="form-check-input square" type="checkbox" value="" id="editoption3">
+          <label class="form-check-label" for="editoption3">
+            Message
+          </label>
+        </div>
+        <div class="form-check mb-16">
+          <input class="form-check-input square" type="checkbox" value="" id="editoption4">
+          <label class="form-check-label" for="editoption4">
+            Setting
+          </label>
+        </div>
+        <div class="form-check mb-16">
+          <input class="form-check-input square" type="checkbox" value="" id="editoption5">
+          <label class="form-check-label" for="editoption5">
+            task menu
+          </label>
+        </div> 
+        <!-- <ul>
           <li class="d-flex mb-16"><span class="square"></span>lecture</li>
           <li class="d-flex mb-16"><span class="square"></span>Coupon</li>
           <li class="d-flex mb-16"><span class="square"></span>Message</li>
           <li class="d-flex mb-16"><span class="square"></span>Setting</li>
           <li class="d-flex mb-16"><span class="square"></span>task menu</li>
-        </ul>
+        </ul> -->
         <hr>
         <h2 class="modal-title deactivate">Deactivate Account</h2>
         <div class="verified-area d-flex align-items-center"><i class="material-icons warning-color">warning</i><p class="warning-color">This cannot be undone!</p></div>
@@ -167,23 +202,23 @@ current: index
 <div class="modal fade" id="view-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <!-- <div class="modal-header"> -->
         <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> -->
-      </div>
+      <!-- </div> -->
       <div class="modal-body d-flex">
-        <div class="media view-photo">
-          <img src="./assets/images/user-photo.jpg" class="user mr-3 h-100" alt="...">
-        </div>
+        <!-- <div class="media view-photo"> -->
+          <img src="./assets/images/user-photo.jpg" class="user mr-3" alt="...">
+        <!-- </div> -->
           <div class="media-body">
             <div class="view-title">
               <span class="mt-0">#1</span>            
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span  class="close"aria-hidden="true">&times;</span>
               </button>
             </div>
             <h4 class="permission">Admin</h4>
-            <h3 class="name">Emir Wicks</h3>
-            <p class="mail-address">emir.wicks@mail.com</p>
+            <h3 class="view-name">Emir Wicks</h3>
+           <p class="mail-address">emir.wicks@mail.com</p>
             <div class="view-footer">
               <h5 class="d-flex align-items-center justify-content-between more-btn"><p>verified</p> <i class="material-icons"data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">expand_more</i></h5>
               
@@ -192,9 +227,9 @@ current: index
       </div>
       <div class="modal-footer">
         <div class="collapse" id="collapseExample">
-          <div class="ccc text-right">
-            <button type="button" class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Deactivate</button>
-            <button type="button" class="btn btn-primary">Edit</button>
+          <div class="view-modal text-right">
+            <button type="button" class="btn btn-outline-pink" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Deactivate</button>
+            <button type="button" class="btn btn-success" >Edit</button>
           </div>
         </div>
       </div>
@@ -214,20 +249,24 @@ current: index
       </div>
       <div class="modal-body">
         <h2 class="modal-title mb-16">Account</h2>
-        <form action="">
+      <form action="">
+        <div class="form-group">
           <div class="name mb-16">
             <label for="name">Name</label>
-            <input class="new-name" type="text"  id="name">
+            <input class="new-name form-control" type="text"  id="name">
           </div>
+        </div>
+        <div class="form-group">
           <div class="mail">
             <label for="mail">Email</label>
-            <input class="new-email" stype="text" id="mail">
+            <input class="new-email form-control" stype="text" id="mail">
           </div>
-        </form>
+        </div>
+      </form>
         <hr>
         <h2 class="modal-title">Verification</h2>
-        <div class="verified-area d-flex align-items-center"><i class="material-icons warning-color">warning</i><p class="mr-auto">unverified</p></div>
-        <input class="form-control verified verified-add" type="text" placeholder="Send Verification Mail">
+        <div class="verified-area d-flex align-items-center"><i class="material-icons warning-color">warning</i><p class="mr-auto font-weight-bold">Unverified</p></div>
+        <button type="button" class="btn btn-block btn-outline-success" disabled>Send Verification Mail</button>
         <hr>
         <h2 class="modal-title mb-16">Access Level</h2>
         <select class="form-control form-control">
@@ -235,13 +274,36 @@ current: index
         </select>
         <hr>
         <h2 class="modal-title mb-16">Custom Access</h2>
-        <ul>
-          <li class="d-flex mb-16"><span class="square"></span>lecture</li>
-          <li class="d-flex mb-16"><span class="square"></span>Coupon</li>
-          <li class="d-flex mb-16"><span class="square"></span>Message</li>
-          <li class="d-flex mb-16"><span class="square"></span>Setting</li>
-          <li class="d-flex mb-16"><span class="square"></span>task menu</li>
-        </ul>
+        <div class="form-check mb-16">
+          <input class="form-check-input square" type="checkbox" value="" id="addoption1">
+          <label class="form-check-label" for="addoption1">
+            lecture
+          </label>
+        </div> 
+        <div class="form-check mb-16">
+          <input class="form-check-input square" type="checkbox" value="" id="addoption2">
+          <label class="form-check-label" for="addoption2">
+            Coupon
+          </label>
+        </div>
+        <div class="form-check mb-16">
+          <input class="form-check-input square" type="checkbox" value="" id="addoption3">
+          <label class="form-check-label" for="addoption3">
+            Message
+          </label>
+        </div>
+        <div class="form-check mb-16">
+          <input class="form-check-input square" type="checkbox" value="" id="addoption4">
+          <label class="form-check-label" for="addoption4">
+            Setting
+          </label>
+        </div>
+        <div class="form-check mb-16">
+          <input class="form-check-input square" type="checkbox" value="" id="addoption5">
+          <label class="form-check-label" for="addoption5">
+            task menu
+          </label>
+        </div> 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-primary add-table " data-dismiss="modal">Cancel</button>

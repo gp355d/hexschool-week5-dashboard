@@ -19,9 +19,12 @@
     bottom: 24px;
     
 }
-.reply {
-    button:first-child{
-        margin-right: 8px;
+.reply-title {
+    a{
+        color: #000;
+    }
+    a:hover{
+        color:$btn-bg-color;
     }
 
 }
