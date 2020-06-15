@@ -8585,10 +8585,10 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-shadow: none;
           box-shadow: none; }
 
-.btn-area a {
-  color: black; }
+.btn-area .pre, .btn-area .next {
+  color: #000000; }
 
-.btn-area a:hover {
+.btn-area .prea :hover, .btn-area .next :hover {
   color: #2A8356; }
 
 .text-edit a {
