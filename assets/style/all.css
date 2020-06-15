@@ -8591,6 +8591,12 @@ h1, h2, h3, h4, h5, h6 {
 .btn-area .prea :hover, .btn-area .next :hover {
   color: #2A8356; }
 
+.btn-area .replybtn {
+  color: #ffffff; }
+
+.btn-area .replybtn:hover {
+  color: #ffffff; }
+
 .text-edit a {
   color: #000; }
 
