@@ -105,10 +105,10 @@
         outline: 0;
         box-shadow: none;
     }
-    a{
-        color: black;
+    .pre,.next{
+        color: #000000;
     }
-    a:hover{
+    .prea :hover,.next :hover{
         color: $btn-bg-color;
     }
    
